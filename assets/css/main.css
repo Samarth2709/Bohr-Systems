@@ -3076,15 +3076,18 @@ input, select, textarea {
 		-webkit-transition: background-color 0.2s ease-in-out;
 		-ms-transition: background-color 0.2s ease-in-out;
 		transition: background-color 0.2s ease-in-out;
-		background-color: rgba(53, 56, 73, 0.95);
-		height: 3.5em;
+		background-color: #ffffff; /* Changed to white background */
+    	height: auto; /* Changed to auto height to fit content */
 		left: 0;
-		line-height: 3.5em;
-		padding: 0 1.25em;
+		line-height: normal; /* Reset line-height, as we'll use padding for vertical spacing */
+		padding: 15px 1.25em; /* Adjusted padding for vertical and horizontal spacing */
 		position: fixed;
 		top: 0;
 		width: 100%;
 		z-index: 10000;
+		display: flex; /* Enable flexbox for alignment */
+    	align-items: center; /* Vertically align items in header */
+    	justify-content: space-between; /* Space between logo and nav */
 	}
 
 		#header h1 {
@@ -3103,17 +3106,25 @@ input, select, textarea {
 				border: 0;
 			}
 
+		#header img {
+			max-height: 3.5em; /* Limit max height of logo to fit in header - adjust as needed */
+			width: auto;       /* Keep aspect ratio */
+			display: block;     /* Ensure image behaves as block element */
+		}
+
 		#header nav {
 			font-family: Raleway, Helvetica, sans-serif;
 			font-size: 0.8em;
 			font-weight: 700;
-			height: 3em;
+			height: auto;
 			letter-spacing: 0.1em;
 			line-height: 3em;
 			position: absolute;
 			right: 0.7em;
 			text-transform: uppercase;
-			top: 0.7em;
+			top: auto; /* Reset top, use flexbox for vertical positioning */
+			bottom: auto; /* Reset bottom */
+			margin-top: 0; /* Reset top margin */
 		}
 
 			#header nav a {
@@ -3165,7 +3176,7 @@ input, select, textarea {
 					}
 
 		#header.alt {
-			background-color: transparent;
+			background-color: #ffffff;
 		}
 
 			#header.alt h1 {
@@ -3176,8 +3187,9 @@ input, select, textarea {
 		@media screen and (max-width: 736px) {
 
 			#header {
-				height: 2.75em;
-				line-height: 2.75em;
+				height: auto; /* Changed to auto height for smaller screens too */
+				padding: 10px 1.25em; /* Reduced padding for smaller screens */
+				line-height: normal; /* Reset line-height */
 			}
 
 				#header nav {
@@ -3201,6 +3213,9 @@ input, select, textarea {
 							#header nav a[href="#menu"]:hover, #header nav a[href="#menu"]:active {
 								background-color: inherit;
 							}
+				#header img {
+					max-height: 2em; /* Slightly smaller logo on smaller screens */
+				}
 
 		}
 
@@ -3223,6 +3238,9 @@ input, select, textarea {
 					margin-left: 0;
 					padding-right: 1.25em;
 				}
+			#header img {
+				max-height: 1.5em; /* Even smaller logo on very small screens */
+			}
 
 		}
 
