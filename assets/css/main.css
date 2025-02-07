@@ -3392,6 +3392,51 @@ input, select, textarea {
 			transform: translateY(0);
 			opacity: 1;
 		}
+/*Nav Bar*/
+	#nav-bar {
+		display: flex; /* Enable flexbox for even spacing */
+		justify-content: space-around; /* Distribute space evenly between links */
+		align-items: center; /* Vertically align links in the nav bar */
+		width: 100%; /* Make nav-bar take full width available in nav element */
+		height: 100%; /* Make nav-bar take full height available in nav element */
+	}
+
+	#nav-bar a {
+		display: block; /* Make links block elements for easier styling and spacing */
+		color: grey; /* Link text color (white, adjust as needed) */
+		text-decoration: none; /* Remove underlines from links */
+		font-family: 'Raleway', Helvetica, sans-serif; /* Use the same font as your header nav */
+		font-weight: 900; /* Bold font weight */
+		font-size: 1.2em; /*  Same font size as your header nav */
+		letter-spacing: 0.1em; /* Same letter spacing */
+		text-transform: uppercase; /* Uppercase text */
+		padding: 0 1em; /* Add horizontal padding to the links */
+		border: 0; /* Reset borders */
+		-moz-transition: color 0.2s ease-in-out; /* Smooth color transition on hover */
+		-webkit-transition: color 0.2s ease-in-out;
+		-ms-transition: color 0.2s ease-in-out;
+		transition: color 0.2s ease-in-out;
+	}
+
+	#nav-bar a:hover {
+		color: black !important; /* Keep white color on hover, adjust if needed */
+		opacity: 0.8; /* Slightly reduce opacity on hover for visual feedback */
+	}
+
+
+	/* Media query for smaller screens - adjust navigation for smaller widths if needed */
+	@media screen and (max-width: 736px) {
+		#nav-bar {
+			flex-direction: column; /* Stack links vertically on smaller screens */
+			justify-content: center; /* Center links vertically */
+		}
+
+		#nav-bar a {
+			padding: 0.75em 1em; /* Increase vertical padding for stacked links */
+			text-align: center; /* Center text in stacked links */
+		}
+	}
+
 
 /* Banner */
 
