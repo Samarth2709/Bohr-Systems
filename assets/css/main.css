@@ -3392,6 +3392,7 @@ input, select, textarea {
 			transform: translateY(0);
 			opacity: 1;
 		}
+
 /*Nav Bar*/
 	#nav-bar {
 		display: flex; /* Enable flexbox for even spacing */
@@ -3427,13 +3428,19 @@ input, select, textarea {
 	/* Media query for smaller screens - adjust navigation for smaller widths if needed */
 	@media screen and (max-width: 736px) {
 		#nav-bar {
-			flex-direction: column; /* Stack links vertically on smaller screens */
+			flex-direction: row; /* Stack links vertically on smaller screens */
 			justify-content: center; /* Center links vertically */
 		}
 
 		#nav-bar a {
 			padding: 0.75em 1em; /* Increase vertical padding for stacked links */
 			text-align: center; /* Center text in stacked links */
+		}
+	}
+
+	@media screen and (max-width: 480px) {
+		#nav-bar a {
+			font-size: 0.9em; /* **Further reduced font-size for screens <= 480px** - Adjust to match logo reduction */
 		}
 	}
 
