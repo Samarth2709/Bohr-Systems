@@ -3619,6 +3619,59 @@ input, select, textarea {
 			filter: blur(2px);
 		}
 
+/* Features Section */
+	#product-features {
+		background-color: grey; /* Example background color, adjust as needed */
+		padding: 6rem 0; /* Example padding, adjust as needed */
+		text-align: center; /* Example text alignment, adjust as needed */
+	}
+
+		#product-features .inner {
+			max-width: 1200px; /* Example max width, adjust to match your layout */
+			margin: 0 auto;
+			padding: 0 2rem; /* Example padding, adjust as needed */
+		}
+
+			#product-features .inner .major {
+				font-size: 2.5rem; /* Example font size, adjust as needed */
+				margin-bottom: 2rem; /* Example margin, adjust as needed */
+				color: #333; /* Example color, adjust as needed */
+			}
+
+			#product-features .features {
+				display: flex;
+				justify-content: space-between;
+				max-width: 1000px; /* Example max width for features, adjust as needed */
+				margin: 0 auto; /* Center the features section */
+			}
+
+				#product-features .features article {
+					flex: 1;
+				}
+
+					#product-features .features article:first-child {
+						margin-right: 20px; /* Spacing between the two columns */
+					}
+
+
+					#product-features .features article .major {
+						font-size: 1.8rem; /* Example font size for category headers */
+						margin-bottom: 1rem; /* Example margin */
+						color: #555; /* Example color */
+						text-align: left; /* Align category header text to the left */
+					}
+
+					#product-features .features article ul {
+						list-style-type: disc;
+						padding-left: 1.5rem; /* Indent the bullet points */
+						text-align: left; /* Align bullet point text to the left */
+					}
+
+					#product-features .features article ul li {
+						margin-bottom: 0.5rem; /* Spacing between bullet points */
+						color: #666; /* Example color for bullet point text */
+					}
+
 /* Wrapper */
 
 	#wrapper > header {
