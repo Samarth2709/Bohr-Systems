@@ -3621,7 +3621,7 @@ input, select, textarea {
 
 /* Features Section */
 	#product-features {
-		background-color: #3f4e85; /* Example background color, adjust as needed */
+		background-color: #45568d; /* Example background color, adjust as needed */
 		padding: 6rem 0; /* Example padding, adjust as needed */
 		text-align: center; /* Example text alignment, adjust as needed */
 	}
@@ -3630,6 +3630,8 @@ input, select, textarea {
 			max-width: 1200px; /* Example max width, adjust to match your layout */
 			margin: 0 auto;
 			padding: 0 2rem; /* Example padding, adjust as needed */
+			display: flex !important; 
+			flex-direction: column !important; /* This stacks children vertically */
 		}
 
 			#product-features .inner .major {
