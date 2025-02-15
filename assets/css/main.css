@@ -275,7 +275,7 @@ input, select, textarea {
 		}
 
 	h2 {
-		font-size: 1.2em;
+		font-size: 2em;
 	}
 
 	h3 {
@@ -3744,6 +3744,15 @@ input, select, textarea {
 			-ms-transform: scaleX(-1);
 			transform: scaleX(-1);
 		}
+		.wrapper.alt2:before {
+			-moz-transform: scaleX(-1);
+			-webkit-transform: scaleX(-1);
+			-ms-transform: scaleX(-1);
+			transform: scaleX(-1);
+		}
+		/* #four .wrapper.alt:before{
+			transform: scaleX(-1);
+		} */
 
 		.wrapper.alt:after {
 			-moz-transform: scaleY(-1) scaleX(-1);
