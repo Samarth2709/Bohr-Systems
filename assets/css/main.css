@@ -3184,65 +3184,7 @@ input, select, textarea {
 				visibility: hidden;
 			}
 
-		@media screen and (max-width: 736px) {
-
-			#header {
-				height: auto; /* Changed to auto height for smaller screens too */
-				padding: 10px 1.25em; /* Reduced padding for smaller screens */
-				line-height: normal; /* Reset line-height */
-			}
-
-				#header nav {
-					top: 0;
-					right: 0;
-					height: inherit;
-					line-height: inherit;
-				}
-
-					#header nav a {
-						height: inherit;
-						line-height: inherit;
-					}
-
-						#header nav a[href="#menu"] {
-							box-shadow: none;
-							padding: 0 1em;
-							border-radius: 0;
-						}
-
-							#header nav a[href="#menu"]:hover, #header nav a[href="#menu"]:active {
-								background-color: inherit;
-							}
-				#header img {
-					max-height: 2em; /* Slightly smaller logo on smaller screens */
-				}
-
-		}
-
-		@media screen and (max-width: 480px) {
-
-			#header nav a[href="#menu"] {
-				width: 4em;
-				white-space: nowrap;
-				text-indent: 4em;
-				position: relative;
-			}
-
-				#header nav a[href="#menu"]:before {
-					width: inherit;
-					position: absolute;
-					top: 0;
-					left: 0;
-					text-indent: 0;
-					text-align: right;
-					margin-left: 0;
-					padding-right: 1.25em;
-				}
-			#header img {
-				max-height: 1.5em; /* Even smaller logo on very small screens */
-			}
-
-		}
+		 
 
 /* Menu */
 
