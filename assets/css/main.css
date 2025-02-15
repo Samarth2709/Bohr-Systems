@@ -3621,7 +3621,7 @@ input, select, textarea {
 
 /* Features Section */
 	#product-features {
-		background-color: grey; /* Example background color, adjust as needed */
+		background-color: #3f4e85; /* Example background color, adjust as needed */
 		padding: 6rem 0; /* Example padding, adjust as needed */
 		text-align: center; /* Example text alignment, adjust as needed */
 	}
@@ -3635,7 +3635,7 @@ input, select, textarea {
 			#product-features .inner .major {
 				font-size: 2.5rem; /* Example font size, adjust as needed */
 				margin-bottom: 2rem; /* Example margin, adjust as needed */
-				color: #333; /* Example color, adjust as needed */
+				color: white; /* Example color, adjust as needed */
 			}
 
 			#product-features .features {
@@ -3657,7 +3657,7 @@ input, select, textarea {
 					#product-features .features article .major {
 						font-size: 1.8rem; /* Example font size for category headers */
 						margin-bottom: 1rem; /* Example margin */
-						color: #555; /* Example color */
+						color: white; /* Example color */
 						text-align: left; /* Align category header text to the left */
 					}
 
@@ -3669,7 +3669,7 @@ input, select, textarea {
 
 					#product-features .features article ul li {
 						margin-bottom: 0.5rem; /* Spacing between bullet points */
-						color: #666; /* Example color for bullet point text */
+						color: white; /* Example color for bullet point text */
 					}
 
 /* Wrapper */
