@@ -3391,7 +3391,7 @@ input, select, textarea {
 
 	#banner {
 		/* padding: 10em 0 4.75em 0 ; */
-		background-image: url('../../images/background-banner.png');
+		background-image: url('../../images/salute-background-banner.jpg');
 		background-size: cover; /* Scale to cover banner area */
         background-repeat: no-repeat; /* Prevent image repetition */
         background-position: center center; /* Center the image */
@@ -3449,9 +3449,9 @@ input, select, textarea {
 			filter: blur(0);
 			opacity: 1;
 			border-bottom: solid 2px rgba(255, 255, 255, 0.125);
-			font-size: 2.25em;
-			margin-bottom: 0.8em;
-			padding-bottom: 0.4em;
+			font-size: 3.25em;
+			margin-bottom: 0.4em;
+			padding-bottom: 0.2em;
 		}
 
 		#banner p {
@@ -3473,7 +3473,7 @@ input, select, textarea {
 			filter: blur(0);
 			opacity: 1;
 			font-family: Raleway, Helvetica, sans-serif;
-			font-size: 1em;
+			font-size: 1.5em;
 			font-weight: 200;
 			letter-spacing: 0.1em;
 			line-height: 2;
@@ -3483,7 +3483,7 @@ input, select, textarea {
 		@media screen and (max-width: 2400px) {
 
 			#banner {
-				padding: 14em 0 12.25em 0 ;
+				padding: 14em 0 26.35em 0 ;
 				/* background-color: #2e3141; */
 				/* background-image: url('../../images/background-banner.png');
 				background-size: cover;
