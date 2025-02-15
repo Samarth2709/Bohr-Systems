@@ -3184,65 +3184,7 @@ input, select, textarea {
 				visibility: hidden;
 			}
 
-		@media screen and (max-width: 736px) {
-
-			#header {
-				height: auto; /* Changed to auto height for smaller screens too */
-				padding: 10px 1.25em; /* Reduced padding for smaller screens */
-				line-height: normal; /* Reset line-height */
-			}
-
-				#header nav {
-					top: 0;
-					right: 0;
-					height: inherit;
-					line-height: inherit;
-				}
-
-					#header nav a {
-						height: inherit;
-						line-height: inherit;
-					}
-
-						#header nav a[href="#menu"] {
-							box-shadow: none;
-							padding: 0 1em;
-							border-radius: 0;
-						}
-
-							#header nav a[href="#menu"]:hover, #header nav a[href="#menu"]:active {
-								background-color: inherit;
-							}
-				#header img {
-					max-height: 2em; /* Slightly smaller logo on smaller screens */
-				}
-
-		}
-
-		@media screen and (max-width: 480px) {
-
-			#header nav a[href="#menu"] {
-				width: 4em;
-				white-space: nowrap;
-				text-indent: 4em;
-				position: relative;
-			}
-
-				#header nav a[href="#menu"]:before {
-					width: inherit;
-					position: absolute;
-					top: 0;
-					left: 0;
-					text-indent: 0;
-					text-align: right;
-					margin-left: 0;
-					padding-right: 1.25em;
-				}
-			#header img {
-				max-height: 1.5em; /* Even smaller logo on very small screens */
-			}
-
-		}
+		 
 
 /* Menu */
 
@@ -3448,11 +3390,13 @@ input, select, textarea {
 /* Banner */
 
 	#banner {
-		padding: 10em 0 4.75em 0 ;
+		/* padding: 10em 0 4.75em 0 ; */
 		background-image: url('../../images/background-banner.png');
 		background-size: cover; /* Scale to cover banner area */
         background-repeat: no-repeat; /* Prevent image repetition */
         background-position: center center; /* Center the image */
+		padding-top: calc(30px + 10em + 15px);
+		width: 100%;          /* Ensure the banner takes the full width */
 		
 	}
 
@@ -3536,10 +3480,10 @@ input, select, textarea {
 			text-transform: uppercase;
 		}
 
-		@media screen and (max-width: 1280px) {
+		@media screen and (max-width: 2400px) {
 
 			#banner {
-				padding: 7em 0 8.25em 0 ;
+				padding: 14em 0 12.25em 0 ;
 				/* background-color: #2e3141; */
 				/* background-image: url('../../images/background-banner.png');
 				background-size: cover;
@@ -3552,7 +3496,7 @@ input, select, textarea {
 		@media screen and (max-width: 980px) {
 
 			#banner {
-				padding: 12em 3em 12.375em 3em ;
+				padding: 12em 3em 12.25em 3em ;
 				margin-bottom: -4.75em;
 			}
 
@@ -3565,7 +3509,7 @@ input, select, textarea {
 		@media screen and (max-width: 736px) {
 
 			#banner {
-				padding: 5em 2em 4.25em 2em ;
+				padding: 6em 2em 8.25em 2em ;
 				margin-bottom: -2.5em;
 			}
 
@@ -3577,13 +3521,13 @@ input, select, textarea {
 						font-size: 1.5em;
 					}
 
-				#banner h2 {
+				/* #banner h2 {
 					font-size: 1.5em;
-				}
+				} */
 
-				#banner p {
+				/* #banner p {
 					font-size: 0.8em;
-				}
+				} */
 
 		}
 
@@ -3621,8 +3565,8 @@ input, select, textarea {
 
 /* Features Section */
 	#product-features {
-		background-color: grey; /* Example background color, adjust as needed */
-		padding: 6rem 0; /* Example padding, adjust as needed */
+		background-color: #45568d; /* Example background color, adjust as needed */
+		padding: 3rem 0; /* Example padding, adjust as needed */
 		text-align: center; /* Example text alignment, adjust as needed */
 	}
 
@@ -3630,12 +3574,14 @@ input, select, textarea {
 			max-width: 1200px; /* Example max width, adjust to match your layout */
 			margin: 0 auto;
 			padding: 0 2rem; /* Example padding, adjust as needed */
+			display: flex !important; 
+			flex-direction: column !important; /* This stacks children vertically */
 		}
 
 			#product-features .inner .major {
 				font-size: 2.5rem; /* Example font size, adjust as needed */
 				margin-bottom: 2rem; /* Example margin, adjust as needed */
-				color: #333; /* Example color, adjust as needed */
+				color: white; /* Example color, adjust as needed */
 			}
 
 			#product-features .features {
@@ -3657,7 +3603,7 @@ input, select, textarea {
 					#product-features .features article .major {
 						font-size: 1.8rem; /* Example font size for category headers */
 						margin-bottom: 1rem; /* Example margin */
-						color: #555; /* Example color */
+						color: white; /* Example color */
 						text-align: left; /* Align category header text to the left */
 					}
 
@@ -3669,7 +3615,7 @@ input, select, textarea {
 
 					#product-features .features article ul li {
 						margin-bottom: 0.5rem; /* Spacing between bullet points */
-						color: #666; /* Example color for bullet point text */
+						color: white; /* Example color for bullet point text */
 					}
 
 /* Wrapper */
