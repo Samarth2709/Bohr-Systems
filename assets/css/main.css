@@ -3638,6 +3638,17 @@ input, select, textarea {
 			font-size: 3em;
 			margin-bottom: 0.8em;
 			padding-bottom: 0.4em;
+			opacity: 0;
+			transform: translateX(10px); /* Initial state */
+			filter: blur(2px);
+			transition-delay: 0.65s;
+			transition: opacity 0.5s ease, transform 0.5s ease, filter 0.25s ease;
+		}
+
+		#wrapper > header h1.visible {
+			opacity: 1; /* Final state */
+			transform: translateY(0);
+			filter: blur(0);
 		}
 
 		#wrapper > header h2 {
@@ -4096,6 +4107,88 @@ input, select, textarea {
 			}
 
 		}
+
+/* The Founders */
+.founders {
+	max-width: 1200px;
+	margin: 4rem auto;
+	padding: 0 2rem;
+  }
+  
+  .founders-grid {
+	/* If you want a grid layout, you can use display: grid;
+	   but here, we're primarily stacking .founder-cards. */
+	display: block;
+	/* Optionally, if you'd like two columns on large screens, uncomment:
+	   grid-template-columns: repeat(2, 1fr);
+	   gap: 3rem; 
+	*/
+  }
+  
+  /* Makes each founder-card stack the name and the content. */
+  .founder-card {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 3rem;
+  }
+  
+  /* Style the founder’s name */
+  .founder-card h3 {
+	text-align: center;
+	color: white;
+	font-size: 1.75em;
+	margin-bottom: 1em;
+	padding-bottom: 0.5em; /* Space between text and line */
+	border-bottom: solid 2px rgba(255, 255, 255, 0.125);
+  }
+  
+  /* Wraps the image and bio side by side */
+  .founder-content {
+	display: flex;
+	gap: 20px; 
+	justify-content: center;
+	align-items: flex-start;
+	flex-wrap: wrap; /* helps it adapt on smaller screens */
+  }
+  
+  /* Style the paragraph (bio) within the founder-content */
+  .founder-content p {
+	font-size: 1.1rem;
+	color: white;
+	max-width: 600px;
+	margin: 0 auto;
+  }
+  
+  /* The founder image */
+  .founder-image {
+	width: 250px;
+	height: 250px;
+	border-radius: 50%;
+	object-fit: cover;
+	box-shadow: 2px 2px 10px rgba(255, 255, 255, 0.9);
+  }
+  
+
+@media (max-width: 768px) {
+	.founders-grid {
+		grid-template-columns: 1fr;
+		gap: 4rem;
+	}
+
+	.section-title {
+		font-size: 2rem;
+		margin-bottom: 2rem;
+	}
+
+	.founder-image {
+		width: 200px;
+		height: 200px;
+	}
+
+	.founder-bio {
+		max-width: 100%;
+	}
+}
 
 /* Footer */
 
