@@ -3401,6 +3401,8 @@ input, select, textarea {
         background-position: center center; /* Center the image */
 		padding-top: calc(30px + 10em + 15px);
 		width: 100%;          /* Ensure the banner takes the full width */
+		margin-bottom: -6.5em;
+    	padding-bottom: 26em;
 		
 	}
 
@@ -3626,6 +3628,14 @@ input, select, textarea {
 
 	#wrapper > header {
 		padding: 11em 0 2.25em 0 ;
+	}
+	#wrapper .about-us{
+		/* background-color: #4c5d96; */
+		/* background-image: url("/images/blue-wide-background-with-linear-blurred-gradient-free-vector.jpg"); */
+		background-size: cover;
+		background-position: center, 0% 30%;
+		background-repeat: no-repeat;
+		margin: 0 auto;
 	}
 
 		#wrapper > header .inner {
