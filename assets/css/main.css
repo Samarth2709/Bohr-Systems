@@ -3395,7 +3395,7 @@ input, select, textarea {
 
 	#banner {
 		/* padding: 10em 0 4.75em 0 ; */
-		background-image: url('../../images/salute-background-banner.jpg');
+		background-image: url('../../images/drone-navy-helicopter-san-diego.jpg');
 		background-size: cover; /* Scale to cover banner area */
         background-repeat: no-repeat; /* Prevent image repetition */
         background-position: center center; /* Center the image */
@@ -3403,7 +3403,6 @@ input, select, textarea {
 		width: 100%;          /* Ensure the banner takes the full width */
 		margin-bottom: -6.5em;
     	padding-bottom: 26em;
-		
 	}
 
 		#banner .inner {
