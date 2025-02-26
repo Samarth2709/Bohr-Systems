@@ -271,7 +271,7 @@ input, select, textarea {
 
 		h1.major, h2.major, h3.major, h4.major, h5.major, h6.major {
 			padding-bottom: 1em;
-			border-bottom: solid 2px rgba(255, 255, 255, 0.125);
+			border-bottom: solid 2px rgba(255, 255, 255, 0.3);
 		}
 
 	h1 {
@@ -3395,7 +3395,7 @@ input, select, textarea {
 
 	#banner {
 		/* padding: 10em 0 4.75em 0 ; */
-		background-image: url('../../images/salute-background-banner.jpg');
+		background-image: url('../../images/drone-navy-helicopter-san-diego.jpg');
 		background-size: cover; /* Scale to cover banner area */
         background-repeat: no-repeat; /* Prevent image repetition */
         background-position: center center; /* Center the image */
@@ -3403,7 +3403,6 @@ input, select, textarea {
 		width: 100%;          /* Ensure the banner takes the full width */
 		margin-bottom: -6.5em;
     	padding-bottom: 26em;
-		
 	}
 
 		#banner .inner {
@@ -3454,7 +3453,7 @@ input, select, textarea {
 			-ms-filter: blur(0);
 			filter: blur(0);
 			opacity: 1;
-			border-bottom: solid 2px rgba(255, 255, 255, 0.125);
+			border-bottom: solid 2px rgba(255, 255, 255, 0.3);
 			font-size: 3.25em;
 			margin-bottom: 0.4em;
 			padding-bottom: 0.2em;
@@ -3644,7 +3643,7 @@ input, select, textarea {
 		}
 
 		#wrapper > header h1 {
-			border-bottom: solid 2px rgba(255, 255, 255, 0.125);
+			border-bottom: solid 2px rgba(255, 255, 255, 0.3);
 			font-size: 3em;
 			margin-bottom: 0.8em;
 			padding-bottom: 0.4em;
@@ -4118,6 +4117,11 @@ input, select, textarea {
 
 		}
 
+/* Mission Statement */
+.mission-statement {
+	padding-bottom: 3em;
+}
+
 /* The Founders */
 .founders {
 	max-width: 1200px;
@@ -4150,6 +4154,7 @@ input, select, textarea {
 	margin-bottom: 1em;
 	padding-bottom: 0.5em; /* Space between text and line */
 	border-bottom: solid 2px rgba(255, 255, 255, 0.125);
+	border-color: #3c3f54;
   }
   
   /* Wraps the image and bio side by side */
@@ -4165,7 +4170,7 @@ input, select, textarea {
   .founder-content p {
 	font-size: 1.1rem;
 	color: white;
-	max-width: 600px;
+	max-width: 700px;
 	margin: 0 auto;
   }
   
