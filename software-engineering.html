@@ -1,0 +1,174 @@
+<!DOCTYPE HTML>
+<!--
+	Solid State by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Bohr Systems - Software Engineering Internship</title>
+		<meta name="description" content="Bohr Systems creates autonomous drones for the Department of Defense Bohr Systems creates low cost and effective drones to keep United States soldiers safe">
+		<link rel="icon" type="image/png" href="favicon.ico">
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+                <div id="header-container"></div>
+				<script>
+					fetch("header.html")
+						.then(response => response.text())
+						.then(data => {
+							document.getElementById("header-container").innerHTML = data;
+						})
+						.catch(error => console.error("Error loading header:", error));
+				</script>
+
+				<!-- Wrapper -->
+					<section id="wrapper">
+						<header class="about-us">
+							<div class="inner">
+								<h1>Software Engineering Internship 2025</h1>
+							</div>
+						</header>
+
+						<!-- Content -->
+							<div class="wrapper">
+								<div class="inner">
+									<form id="software-intern" enctype="multipart/form-data"> 
+                                        <h2>Full Name:*</h2>
+                                        <input type="text" id="Name" name="Name" placeholder="Enter your full name" required>
+                                
+                                        <h2>Email:*</h2>
+                                        <input type="email" id="Email" name="Email" placeholder="Enter your email" required>
+                                
+                                        <h2>Age:*</h2>
+                                        <input type="number" id="Age" name="Age" min="10" required><br>
+
+                                        
+
+                                        <h2>Currently Enrolled in an Educational Program?*</h2>
+                                        <select id="Enrolled" name="Enrolled" required>
+                                            <option value="yes">Yes</option>
+                                            <option value="no">No</option>
+                                        </select>
+
+                                        <h2>Educational Degree:*</h2>
+                                        <p>Provide the degree you are currently earning or latest educational degree earned.</p>
+                                        <select id="Degree" name="Degree" required>
+                                            <option value="" disabled selected hidden>Select a degree</option>
+                                            <option value="High School Diploma">High School Diploma</option>
+                                            <option value="Associate's Degree">Associate's Degree</option>
+                                            <option value="Bachelor's Degree">Bachelor's Degree</option>
+                                            <option value="Master's Degree">Master's Degree</option>
+                                            <option value="PhD">PhD</option>
+                                        </select>
+
+
+                                        <h2>Expected Graduation Year:*</h2>
+                                        <input type="number" id="grad_year" name="grad_year" min="1900" max="2100" required>
+
+                                        <h2>Preferred Programming Languages (Comma separated):*</h2>
+                                        <input type="text" id="languages" name="languages" required>
+
+                                        <h2>Years of Experience with Computer Science:*</h2>
+                                        <input type="number" id="experience" name="experience" min="0" required><br>
+
+                                        <h2>What exceptional work have you done?*</h2>
+                                        <p>Tell us about a piece of work that you are most proud about.</p>
+                                        <textarea id="projects" name="projects" rows="3" placeholder="1. Project Name - Link (if available)&#10;2. Project Name - Link (if available)&#10;3. Project Name - Link (if available)"required></textarea>
+
+                                        <h2>GitHub Link:</h2>
+                                        <input type="url" id="github" name="github">
+
+                                        <h2>LinkedIn Link:</h2>
+                                        <input type="url" id="linkedin" name="linkedin">
+
+                                        <h2>City of Residence:*</h2>
+                                        <p>Where will you be located during the summer?</p>
+                                        <input type="text" id="city" name="city">
+
+                                        <h2>Resume:</h2>
+                                        <p>Email us your resume at <a href="mailto:admin@bohrsystems.us">admin@bohrsystems.us</a> and make sure to include your full name in the subject. If you would like, include a fun fact about yourself.</p>
+                                
+                                        <button type="submit">Submit</button>
+                                    </form>
+                                    <div id="response-message" style="margin-top: 20px;"></div>
+								</div>
+							</div>
+					</section>
+
+				<!-- Footer -->
+				<div id="footer-placeholder">
+					<script>
+						fetch('footer.html')
+							.then(response => response.text())
+							.then(data => {
+								document.getElementById('footer-placeholder').innerHTML = data;
+							})
+							.catch(error => console.error('Error loading footer:', error));
+					</script>
+				</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script>
+				document.addEventListener("DOMContentLoaded", function() {
+					setTimeout(() => {
+						document.querySelector("#wrapper > header h1").classList.add("visible");
+					}, 500); // Delay slightly for a smoother effect
+				});
+			</script>
+            <script>
+                // Replace with your actual Apps Script URL
+                const scriptURL = 'https://script.google.com/macros/s/AKfycbyd3t5gfQfuPvihZ_G4XJeQkBgiXkOdHHmLjXi6Fvlri8OfZLf269HocFWr72XCfsaG/exec'; // text form deployment
+                const form = document.getElementById('software-intern');
+                const responseMessage = document.getElementById('response-message');
+            
+                form.addEventListener('submit', (e) => {
+                    e.preventDefault(); // Stop the default form submission & redirect
+            
+                    // Show loading message
+                    responseMessage.innerHTML = 'Submitting application...';
+            
+                    // Create the FormData object
+                    const formData = new FormData(form);
+            
+                    fetch(scriptURL, {
+                    method: 'POST',
+                    body: formData
+                    })
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Network response was not ok ' + response.statusText);
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                        console.log('Success:', data);
+                        responseMessage.innerHTML = 'Application submitted successfully!';
+                        form.reset();
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                        responseMessage.innerHTML = 'There was an error submitting your form. Please try again.';
+                    });
+                });
+              </script>
+			
+
+	</body>
+</html>
