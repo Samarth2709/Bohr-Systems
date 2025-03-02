@@ -9,7 +9,7 @@
 		<title>Bohr Systems - Revolutionizing Autonomous Drone Swarms</title>
 		<meta name="description" content="Bohr Systems creates autonomous drones for the Department of Defense Bohr Systems creates low cost and effective drones to keep United States soldiers safe">
 
-		<link rel="icon" type="image/png" href="images/BohrSystemsLogoFavicon.png">
+		<link rel="icon" type="image/png" href="favicon.ico">
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -19,20 +19,16 @@
 		<!-- Page Wrapper -->
 			<div id="page-wrapper">
 				<!-- Header -->
-					<header id="header" class="alt">
-						<!-- <h1><a href="index.html">Bohr Systems</a></h1> -->
-						<a href="index.html"><img src="images/BohrSystemsLogo.png" alt="Bohr Systems Logo" /></a>
-						<nav>
-							<div id="nav-bar">
-								<a href="index.html">Home</a>
-								<a href="https://www.linkedin.com/company/bohr-systems/jobs/" rel="noopener noreferrer">Careers</a>
-								<a href="about-us.html">About Us</a>
-							</div>
-						</nav>
-						<!-- <nav>
-							<a href="#menu">Menu</a>
-						</nav> -->
-					</header>
+				<div id="header-container"></div>
+				<script>
+					fetch("header.html")
+						.then(response => response.text())
+						.then(data => {
+							document.getElementById("header-container").innerHTML = data;
+						})
+						.catch(error => console.error("Error loading header:", error));
+				</script>
+				
 
 				<!-- Menu -->
 					<nav id="menu">
