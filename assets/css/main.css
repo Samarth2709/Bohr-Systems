@@ -301,7 +301,7 @@ input, select, textarea {
 	@media screen and (max-width: 736px) {
 
 		h2 {
-			font-size: 1em;
+			font-size: 1.8em; /* Increased from 1em to be larger than founder h3 titles */
 		}
 
 		h3 {
@@ -2489,6 +2489,16 @@ form h2 {
 	resize: vertical;
   }
 
+  .word-count-error {
+	color: red;
+}
+/* Style for validation message */
+.validation-message {
+	color: red;
+	margin-top: -10px;
+	display: none;
+}
+
 
 /* Box */
 
@@ -4318,6 +4328,46 @@ form h2 {
 	box-shadow: 2px 2px 10px rgba(255, 255, 255, 0.9);
   }
   
+/* For screens wider than 1680px - default layout */
+@media (min-width: 1681px) {
+  /* Keep Samarth's layout with image on the right */
+  .founder-card:nth-child(2) .founder-content {
+    flex-direction: row;
+  }
+}
+
+/* For screens 1680px or narrower */
+@media (max-width: 1680px) {
+  /* For Samarth's card - put image before text */
+  .founder-card:nth-child(2) .founder-content {
+    flex-direction: column-reverse;
+  }
+  
+  /* Center both elements */
+  .founder-card:nth-child(2) .founder-content p,
+  .founder-card:nth-child(2) .founder-content img {
+    margin: 0 auto;
+  }
+  
+  /* Add some spacing between image and text */
+  .founder-card:nth-child(2) .founder-content img {
+    margin-bottom: 1.5em;
+  }
+}
+
+/* Ensure mission and founders section h2 titles remain larger than founder names */
+@media (max-width: 736px) {
+  .mission-statement h2.major,
+  .founders h2.major {
+    font-size: 2em; /* Even larger than the general h2 size */
+    margin-bottom: 1.5em;
+  }
+  
+  /* Slightly reduce founder name size to ensure better hierarchy */
+  .founder-card h3 {
+    font-size: 1.4em;
+  }
+}
 
 @media (max-width: 768px) {
 	.founders-grid {
