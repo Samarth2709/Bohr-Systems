@@ -24,7 +24,7 @@
         .demo-header {
             text-align: center;
             padding: 20px 0 40px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #2b2b8a 0%, #1a1a6b 100%);
             color: white;
             margin-bottom: 0;
             margin-top: 5em;
@@ -402,7 +402,7 @@
                             </ul>
                             
                             <div class="contact-section">
-                                <a href="mailto:information@bohrsystem.us" class="contact-btn">Contact Us</a>
+                                <a href="mailto:admin@bohrsystems.us" class="contact-btn">Contact Us</a>
                             </div>
                         </div>
                     </div>
@@ -434,20 +434,23 @@
             // Pause video before switching
             demoVideo.pause();
             
+            // Define the consistent description for both views
+            const consistentDescription = 'The video above visualizes two perspectives. The left shows the preloaded 3D terrain map of the environment and the right shows the drone\'s perspective.' +
+                '<br><br>' +
+                'With our software, we can extract the identifying features, displayed by the white points. On the left, the red marker and green square represent the drone\'s calculated position.' +
+                '<br><br>' +
+                'Overall, we compare the drone\'s observations to the pre-loaded map and are able to gauge the heading and location of the drone. Our solution replaces GPS, when GPS is unreliable.';
+            
             if (toggle.checked) {
                 // Switch to Side view
                 demoVideo.src = 'videos/Side-BothClouds-Colored-Edited.mp4';
-                description.innerHTML = 'The video above demonstrates our navigation system from a <strong>side perspective</strong>. ' +
-                    'This shows both the main cloud processing algorithm and cropped cloud analysis working together ' +
-                    'with enhanced color processing for better visual tracking in challenging environments.';
+                description.innerHTML = consistentDescription;
                 aerialLabel.classList.remove('active');
                 sideLabel.classList.add('active');
             } else {
                 // Switch to Aerial view
                 demoVideo.src = 'videos/Aerial-BothClouds-Colored-Editted.mp4';
-                description.innerHTML = 'The video above demonstrates our navigation system from an <strong>aerial perspective</strong>. ' +
-                    'This shows both the main cloud processing algorithm and cropped cloud analysis working together ' +
-                    'with enhanced color processing for better visual tracking in challenging environments.';
+                description.innerHTML = consistentDescription;
                 aerialLabel.classList.add('active');
                 sideLabel.classList.remove('active');
             }
