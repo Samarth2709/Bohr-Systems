@@ -56,24 +56,57 @@
             padding: 40px;
         }
 
-        .view-toggle {
+        .video-container {
             text-align: center;
             margin: 40px 0;
         }
 
-        .view-toggle h3 {
-            font-size: 1.4em;
-            margin-bottom: 5px;
+        .video-container h4 {
+            font-size: 1.3em;
+            margin-bottom: 20px;
             color: #444;
             font-weight: 400;
         }
 
-        .switch-container {
+        .video-container video {
+            width: 100%;
+            max-width: 900px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        }
+
+        .video-and-switch {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 20px;
-            margin: 10px 0;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .video-wrapper {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .video-wrapper video {
+            width: 100%;
+            max-width: 700px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        }
+
+        .switch-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            min-width: 150px;
         }
 
         .switch-label {
@@ -117,7 +150,7 @@
             content: "";
             height: 26px;
             width: 26px;
-            left: 4px;
+            left: 0px;
             bottom: 4px;
             background-color: white;
             transition: .4s;
@@ -131,26 +164,6 @@
 
         input:checked + .slider:before {
             transform: translateX(26px);
-        }
-
-        .video-container {
-            text-align: center;
-            margin: 40px 0;
-        }
-
-        .video-container h4 {
-            font-size: 1.3em;
-            margin-bottom: 20px;
-            color: #444;
-            font-weight: 400;
-        }
-
-        .video-container video {
-            width: 100%;
-            max-width: 900px;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
         }
 
         .description {
@@ -298,6 +311,21 @@
             .demo-section-inner {
                 padding: 20px;
             }
+            
+            .video-and-switch {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .video-wrapper {
+                min-width: auto;
+            }
+            
+            .switch-container {
+                flex-direction: row;
+                min-width: auto;
+                padding: 15px;
+            }
 
             #footer {
                 /* padding-top: 2em !important; */
@@ -335,26 +363,24 @@
         <div class="demo-container">
             <section class="demo-section">
                 <div class="demo-section-inner">
-                    <!-- View Toggle -->
-                    <div class="view-toggle">
-                        <h3>View Perspective</h3>
-                        <div class="switch-container">
-                            <span class="switch-label active" id="aerialLabel">Aerial</span>
-                            <label class="switch">
-                                <input type="checkbox" id="viewToggle" onchange="changeView()">
-                                <span class="slider"></span>
-                            </label>
-                            <span class="switch-label" id="sideLabel">Side</span>
-                        </div>
-                    </div>
-
                     <!-- Video Container -->
-                    <div class="video-container">
-                        <h4>Navigation System Demo</h4>
-                        <video id="demoVideo" controls autoplay loop muted>
-                            <source src="videos/Aerial-BothClouds-Colored-Editted.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
+                    <div class="video-container">   
+                        <div class="video-and-switch">
+                            <div class="video-wrapper">
+                                <video id="demoVideo" controls autoplay loop muted>
+                                    <source src="videos/Aerial-BothClouds-Colored-Editted.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                            <div class="switch-container">
+                                <span class="switch-label active" id="aerialLabel">Aerial</span>
+                                <label class="switch">
+                                    <input type="checkbox" id="viewToggle" onchange="changeView()">
+                                    <span class="slider"></span>
+                                </label>
+                                <span class="switch-label" id="sideLabel">Side</span>
+                            </div>
+                        </div>
                     </div>
 
                     <!-- Demo Description -->
