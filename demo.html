@@ -368,17 +368,17 @@
                         <div class="video-and-switch">
                             <div class="video-wrapper">
                                 <video id="demoVideo" controls autoplay loop muted>
-                                    <source src="videos/Aerial-BothClouds-Colored-Editted.mp4" type="video/mp4">
+                                    <source src="videos/Side-BothClouds-Colored-Edited.mp4" type="video/mp4">
                                     Your browser does not support the video tag.
                                 </video>
                             </div>
                             <div class="switch-container">
-                                <span class="switch-label active" id="aerialLabel">Aerial</span>
+                                <span class="switch-label active" id="sideLabel">Side</span>
                                 <label class="switch">
                                     <input type="checkbox" id="viewToggle" onchange="changeView()">
                                     <span class="slider"></span>
                                 </label>
-                                <span class="switch-label" id="sideLabel">Side</span>
+                                <span class="switch-label" id="aerialLabel">Aerial</span>
                             </div>
                         </div>
                     </div>
@@ -468,17 +468,17 @@
                 'Overall, we compare the drone\'s observations to the pre-loaded map and are able to gauge the heading and location of the drone. Our solution replaces GPS, when GPS is unreliable.';
             
             if (toggle.checked) {
-                // Switch to Side view
-                demoVideo.src = 'videos/Side-BothClouds-Colored-Edited.mp4';
-                description.innerHTML = consistentDescription;
-                aerialLabel.classList.remove('active');
-                sideLabel.classList.add('active');
-            } else {
                 // Switch to Aerial view
                 demoVideo.src = 'videos/Aerial-BothClouds-Colored-Editted.mp4';
                 description.innerHTML = consistentDescription;
                 aerialLabel.classList.add('active');
                 sideLabel.classList.remove('active');
+            } else {
+                // Switch to Side view
+                demoVideo.src = 'videos/Side-BothClouds-Colored-Edited.mp4';
+                description.innerHTML = consistentDescription;
+                aerialLabel.classList.remove('active');
+                sideLabel.classList.add('active');
             }
             
             // Load the new video
