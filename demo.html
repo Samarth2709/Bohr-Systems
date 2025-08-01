@@ -17,31 +17,8 @@
 
         .demo-container {
             max-width: 1200px;
-            margin: 0 auto;
+            margin: 6em auto 0 auto;
             padding: 0 20px;
-        }
-
-        .demo-header {
-            text-align: center;
-            padding: 20px 0 40px;
-            background: linear-gradient(135deg, #2b2b8a 0%, #1a1a6b 100%);
-            color: white;
-            margin-bottom: 0;
-            margin-top: 5em;
-        }
-
-        .demo-header h1 {
-            font-size: 2.5em;
-            font-weight: 300;
-            margin: 0 0 10px;
-            letter-spacing: -1px;
-        }
-
-        .demo-header p {
-            font-size: 1.2em;
-            opacity: 0.9;
-            margin: 0;
-            font-weight: 300;
         }
 
         .demo-section {
@@ -80,7 +57,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 40px;
+            gap: 20px;
             flex-wrap: wrap;
         }
 
@@ -95,6 +72,33 @@
             height: auto;
             border-radius: 8px;
             box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        }
+
+        .video-labels {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .video-label {
+            font-weight: 600;
+            font-size: 1em;
+            color: #444;
+            padding: 5px 10px;
+            background: rgba(102, 126, 234, 0.1);
+            border-radius: 4px;
+            border-left: 3px solid #667eea;
+        }
+
+        .video-label.left {
+            align-self: flex-start;
+        }
+
+        .video-label.right {
+            align-self: flex-end;
         }
 
         .switch-container {
@@ -309,7 +313,7 @@
             }
             
             .demo-section-inner {
-                padding: 20px;
+                padding: 0 20px 20px 20px;
             }
             
             .video-and-switch {
@@ -327,9 +331,16 @@
                 padding: 15px;
             }
 
-            #footer {
-                /* padding-top: 2em !important; */
+            .video-labels {
+                margin-bottom: 8px;
             }
+
+            .video-label {
+                font-size: 0.9em;
+                padding: 4px 8px;
+            }
+
+
 
             #footer .inner {
                 width: 95% !important;
@@ -351,22 +362,21 @@
                 .catch(error => console.error("Error loading header:", error));
         </script>
 
-        <!-- Demo Header -->
-        <section class="demo-header">
-            <div class="demo-container">
-                <h1>Navigation Technology Demo</h1>
-                <p>Real-time GPS-denied navigation system demonstration</p>
-            </div>
-        </section>
-
         <!-- Demo Section -->
         <div class="demo-container">
             <section class="demo-section">
                 <div class="demo-section-inner">
+                    <h1 style="text-align: center; color: #444; font-size: 2.5em; margin-bottom: 15px; font-weight: bold;">Drone Localization</h1>
+                    <p style="text-align: center; color: #666; font-size: 1.2em; margin-bottom: 40px; font-weight: 300;">Calculating a drone's position in a GPS-jammed environment with LIDAR</p>
+                    
                     <!-- Video Container -->
                     <div class="video-container">   
                         <div class="video-and-switch">
                             <div class="video-wrapper">
+                                <div class="video-labels">
+                                    <span class="video-label left">3D Map</span>
+                                    <span class="video-label right">Drone Perspective</span>
+                                </div>
                                 <video id="demoVideo" controls autoplay loop muted>
                                     <source src="videos/Side-BothClouds-Colored-Edited.mp4" type="video/mp4">
                                     Your browser does not support the video tag.
@@ -386,13 +396,13 @@
                     <!-- Demo Description -->
                     <div class="description">
                         <p id="demoDescription">
-                            The video above visualizes two perspectives. The left shows the preloaded 3D terrain map of the environment and the right shows the drone’s perspective. 
+                            The left shows the preloaded 3D terrain map of the environment. The right shows the drone’s perspective. 
                             <br>
                             <br>
-                            With our software, we can extract the identifying features, displayed by the white points. On the left, the red marker and green square represent the drone's calculated position.
+                            With our software, we can extract the identifying features, displayed by the white points. The drone's calculated position is shown on the left with the red marker and green square.
                             <br>
                             <br>
-                            Overall, we compare the drones observations to the pre-loaded map and are able to gauge the heading and location of the drone. Our solution replaces GPS, when GPS is unreliable.
+                            Overall, we compare the drones perspective to the pre-loaded map and are able to gauge the heading and location of the drone. Our solution replaces GPS, when GPS is unreliable.
                         </p>
                     </div>
                 </div>
@@ -401,7 +411,7 @@
             <!-- Technology Explanation -->
             <section class="demo-section tech-explanation">
                 <div class="demo-section-inner">
-                    <h3 style="text-align: center; color: #444; font-size: 1.8em; margin-bottom: 30px; font-weight: 400;">Solution Overview</h3>
+                    <h3 style="text-align: center; color: #444; font-size: 1.8em; margin-bottom: 30px; font-weight: bold;">Solution Overview</h3>
                     
                     <div class="tech-grid">
                         <div class="tech-card">
