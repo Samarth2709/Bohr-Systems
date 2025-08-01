@@ -271,20 +271,20 @@
 
         /* Footer Visibility Improvements */
         #footer {
-            background-color: #01014B !important;
-            background-image: linear-gradient(to top, rgba(1, 1, 75, 0.9), rgba(1, 1, 75, 0.9)), url("images/bg.jpg") !important;
-            background-size: auto, cover !important;
-            background-position: center, center !important;
+            background-color: #000000 !important;
+            background-image: none !important;
             margin-top: 0 !important;
             /* padding-top: 3em !important; */
-            min-height: 200px;
-            border-top: 3px solid #667eea;
+            min-height: 10px;
+            border-top: 0px solid rgba(255, 255, 255, 0.3);
+            color: #ffffff !important;
         }
 
         #footer .inner {
             max-width: 1200px !important;
             width: 90% !important;
             margin: 0 auto !important;
+            padding: 0 !important;
         }
 
         #footer .inner .contact {
@@ -300,17 +300,17 @@
 
         #footer .inner .contact li .icon {
             margin-right: 0.75em;
-            color: #667eea;
+            color: #ffffff;
         }
 
         #footer .inner .contact li a {
-            color: #667eea !important;
+            color: #ffffff !important;
             text-decoration: none;
             transition: color 0.3s ease;
         }
 
         #footer .inner .contact li a:hover {
-            color: #89a8ff !important;
+            color: rgba(255, 255, 255, 0.8) !important;
         }
 
         #footer .inner .copyright {
@@ -320,7 +320,7 @@
         }
 
         #footer .inner .copyright li {
-            color: rgba(255, 255, 255, 0.7) !important;
+            color: rgba(255, 255, 255, 0.8) !important;
             font-size: 0.95em !important;
         }
 
@@ -378,6 +378,10 @@
     <!-- Page Wrapper -->
     <div id="page-wrapper">
 
+        <!-- Logo Section -->
+        <div style="text-align: center; padding: 0px 20px 0 20px; background: rgba(255, 255, 255, 0.02); border-bottom: 1px solid rgba(255, 255, 255, 0.1);">
+            <img src="images/New Logo/BohrSystems-LogoName.png" alt="Bohr Systems Logo" style="max-width: 200px; height: auto; filter: brightness(1.1) contrast(1.1);">
+        </div>
 
         <!-- Demo Section -->
         <div class="demo-container">
@@ -391,11 +395,11 @@
                         <div class="video-and-switch">
                             <div class="video-wrapper">
                                 <div class="video-labels">
-                                    <span class="video-label left">3D Map</span>
-                                    <span class="video-label right">Drone Perspective</span>
+                                    <span class="video-label left">Drone Perspective</span>
+                                    <span class="video-label right">3D Map</span>
                                 </div>
                                 <video id="demoVideo" controls autoplay loop muted>
-                                    <source src="videos/Side-BothClouds-Colored-Edited.mp4" type="video/mp4">
+                                    <source src="videos/Animation.mp4" type="video/mp4">
                                     Your browser does not support the video tag.
                                 </video>
                             </div>
@@ -496,13 +500,13 @@
             
             if (toggle.checked) {
                 // Switch to Aerial view
-                demoVideo.src = 'videos/Aerial-BothClouds-Colored-Editted.mp4';
+                demoVideo.src = 'videos/Animation.mp4';
                 description.innerHTML = consistentDescription;
                 aerialLabel.classList.add('active');
                 sideLabel.classList.remove('active');
             } else {
                 // Switch to Side view
-                demoVideo.src = 'videos/Side-BothClouds-Colored-Edited.mp4';
+                demoVideo.src = 'videos/Animation.mp4';
                 description.innerHTML = consistentDescription;
                 aerialLabel.classList.remove('active');
                 sideLabel.classList.add('active');
